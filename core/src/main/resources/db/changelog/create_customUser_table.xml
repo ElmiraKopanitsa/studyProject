@@ -14,7 +14,7 @@
             age INT,
             email VARCHAR(50) UNIQUE NOT NULL,
             birthday DATE,
-            phone VARCHAR(12),
+            phone VARCHAR(21),
             login VARCHAR(50) UNIQUE NOT NULL,
             password VARCHAR(50) NOT NULL
             );
