@@ -4,6 +4,7 @@ import dto.CustomUserDto;
 import entity.CustomUser;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public interface CustomUserService {
 
@@ -21,11 +22,11 @@ public interface CustomUserService {
 
     CustomUserDto getByLogin(String login);
 
-    CustomUserDto getAllCustomUsers();
+    List<CustomUserDto> getAllCustomUsers();
 
-    CustomUserDto createCustomUser(CustomUser customUser);
+    CustomUserDto createCustomUser(CustomUserDto customUserDto);
 
-    CustomUserDto updateCustomUser(CustomUser customUser);
+    CustomUserDto updateCustomUser(Long id, CustomUserDto customUserDto);
 
-    void deleteCustomUser(CustomUser customUser);
+    void deleteCustomUser(Long id);
 }
