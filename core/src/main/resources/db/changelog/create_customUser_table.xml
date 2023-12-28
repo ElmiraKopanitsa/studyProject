@@ -9,8 +9,8 @@
         <sql>
             CREATE TABLE if not exists customUser (
             id bigserial PRIMARY KEY,
-            firstName VARCHAR(50) NOT NULL,
-            lastName VARCHAR(50) NOT NULL,
+            name VARCHAR(50) NOT NULL,
+            surname VARCHAR(50) NOT NULL,
             age INT,
             email VARCHAR(50) UNIQUE NOT NULL,
             birthday DATE,

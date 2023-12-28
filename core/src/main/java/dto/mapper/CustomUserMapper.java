@@ -6,10 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface CustomUserMapper {
-
-    CustomUserMapper INSTANCE = Mappers.getMapper(CustomUserMapper.class);
 
     @Mapping(target = "id", ignore = true) // id не нужно маппировать
     @Mapping(target = "roles", ignore = true) // игнорировать маппинг для roles

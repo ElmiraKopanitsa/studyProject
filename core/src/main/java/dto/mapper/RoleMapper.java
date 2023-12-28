@@ -6,10 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface RoleMapper {
-
-    RoleMapper INSTANCE = Mappers.getMapper(RoleMapper.class);
 
     @Mapping(target = "id", ignore = true) // id не нужно маппировать
     RoleDto roleToRoleDto(Role role);

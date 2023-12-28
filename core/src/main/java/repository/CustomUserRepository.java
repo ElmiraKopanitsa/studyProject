@@ -2,15 +2,16 @@ package repository;
 
 import entity.CustomUser;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.time.LocalDate;
 import java.util.Optional;
 
-public interface CustomUserRepository extends JpaRepository<CustomUser, Long> {
+public interface CustomUserRepository extends JpaRepository<CustomUser, Long>, JpaSpecificationExecutor<CustomUser> {
 
-    Optional<CustomUser> findByFirstName(String firstName);
+    Optional<CustomUser> findByName(String name);
 
-    Optional<CustomUser> findByLastName(String lastName);
+    Optional<CustomUser> findBySurname(String surname);
 
     Optional<CustomUser> findByAge(Integer age);
 

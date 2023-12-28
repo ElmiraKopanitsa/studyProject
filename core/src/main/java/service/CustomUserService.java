@@ -8,9 +8,9 @@ import java.util.List;
 
 public interface CustomUserService {
 
-    CustomUserDto getByFistName(String firstName);
+    CustomUserDto getByName(String name);
 
-    CustomUserDto getByLastName(String lastName);
+    CustomUserDto getBySurname(String surname);
 
     CustomUserDto getByAge(Integer age);
 

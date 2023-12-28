@@ -4,7 +4,7 @@ target/
 !**/src/test/**/target/
 
 ### soloStudyProject ###
-application.properties
+core/application.properties
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
