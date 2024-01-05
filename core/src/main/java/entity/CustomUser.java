@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.Objects;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -40,4 +41,20 @@ public class CustomUser {
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private Set<Role> roles;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CustomUser that = (CustomUser) o;
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) &&
+                Objects.equals(surname, that.surname) && Objects.equals(age, that.age) &&
+                Objects.equals(email, that.email) && Objects.equals(birthday, that.birthday) &&
+                Objects.equals(phone, that.phone) && Objects.equals(login, that.login) &&
+                Objects.equals(password, that.password) && Objects.equals(roles, that.roles);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, surname, age, email, birthday, phone, login, password, roles);
+    }
 }
