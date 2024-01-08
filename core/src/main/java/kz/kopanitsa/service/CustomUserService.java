@@ -1,7 +1,6 @@
-package service;
+package kz.kopanitsa.service;
 
-import dto.CustomUserDto;
-import entity.CustomUser;
+import kz.kopanitsa.dto.CustomUserDto;
 
 import java.time.LocalDate;
 import java.util.List;

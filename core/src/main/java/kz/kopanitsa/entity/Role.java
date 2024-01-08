@@ -1,4 +1,4 @@
-package entity;
+package kz.kopanitsa.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,7 +11,7 @@ import java.util.Objects;
 @Setter
 @Builder
 @Entity
-@Table(name="role")
+@Table(name="roles")
 public class Role {
 
     @Id

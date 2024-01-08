@@ -1,10 +1,9 @@
-package dto;
+package kz.kopanitsa.dto;
 
 import jakarta.validation.constraints.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -38,6 +37,4 @@ public class CustomUserDto {
     @NotBlank
     @Size(max = 50)
     private String password;
-
-    private List<RoleDto> roles;
 }

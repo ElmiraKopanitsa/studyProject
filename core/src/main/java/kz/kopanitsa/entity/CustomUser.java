@@ -1,8 +1,7 @@
-package entity;
+package kz.kopanitsa.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Set;
@@ -13,7 +12,7 @@ import java.util.Set;
 @Setter
 @Builder
 @Entity
-@Table(name="customUser")
+@Table(name="users")
 public class CustomUser {
 
     @Id
@@ -35,8 +34,8 @@ public class CustomUser {
     private String login;
     @Column(nullable = false)
     private String password;
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "customUser_role",
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private Set<Role> roles;

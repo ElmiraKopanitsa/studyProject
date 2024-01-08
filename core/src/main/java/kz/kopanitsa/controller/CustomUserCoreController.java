@@ -1,9 +1,9 @@
-package controller;
+package kz.kopanitsa.controller;
 
-import dto.CustomUserDto;
+import kz.kopanitsa.dto.CustomUserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import service.CustomUserService;
+import kz.kopanitsa.service.CustomUserService;
 
 import java.time.LocalDate;
 import java.util.List;

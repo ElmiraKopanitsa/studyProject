@@ -7,7 +7,7 @@
 
     <changeSet id="create_customUser_table" author="postgres">
         <sql>
-            CREATE TABLE if not exists customUser (
+            CREATE TABLE if not exists users (
             id bigserial PRIMARY KEY,
             name VARCHAR(50) NOT NULL,
             surname VARCHAR(50) NOT NULL,
@@ -19,19 +19,19 @@
             password VARCHAR(50) NOT NULL
             );
 
-            Create table if not exists role (
+            Create table if not exists roles (
             id bigserial PRIMARY KEY,
             role varchar(20) NOT NULL
             );
 
-            Create table if not exists customUser_role (
+            Create table if not exists user_roles (
             user_id bigint NOT NULL,
             role_id bigint NOT NULL,
-            FOREIGN KEY (user_id) REFERENCES customUser (id),
-            FOREIGN KEY (role_id) REFERENCES role (id)
+            FOREIGN KEY (user_id) REFERENCES users (id),
+            FOREIGN KEY (role_id) REFERENCES roles (id)
             );
 
-            Insert into role (role) values
+            Insert into roles (role) values
             ('ROLE_USER'),
             ('ROLE_ADMIN');
         </sql>

@@ -1,24 +1,23 @@
-package service;
+package kz.kopanitsa.service;
 
-import dto.CustomUserDto;
-import dto.mapper.CustomUserMapper;
-import dto.mapper.RoleMapper;
-import entity.CustomUser;
+import kz.kopanitsa.dto.CustomUserDto;
+import kz.kopanitsa.dto.mapper.CustomUserMapper;
+import kz.kopanitsa.entity.CustomUser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import repository.CustomUserRepository;
-import repository.RoleRepository;
-import service.impl.CustomUserServiceImpl;
+import kz.kopanitsa.repository.CustomUserRepository;
+import kz.kopanitsa.repository.RoleRepository;
+import kz.kopanitsa.service.impl.CustomUserServiceImpl;
 
 import java.time.LocalDate;
 import java.util.*;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest(classes = core.CoreApplication.class)
+@SpringBootTest(classes = kz.kopanitsa.CoreApplication.class)
 class CustomUserServiceTest {
 
     @Mock
@@ -27,8 +26,6 @@ class CustomUserServiceTest {
     RoleRepository roleRepository;
     @Mock
     private CustomUserMapper customUserMapper;
-    @Mock
-    private RoleMapper roleMapper;
     @InjectMocks
     CustomUserServiceImpl customUserService;
     private CustomUser customUser;
