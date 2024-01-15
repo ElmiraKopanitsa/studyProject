@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
-@FeignClient(name = "userCoreFeignClient", url = "http://localhost:8080/users/")
+@FeignClient(name = "userCoreFeignClient", url = "http://localhost:8090/users/")
 public interface UserCoreFeignClient {
 
     @GetMapping(value = "/name/{name}")
